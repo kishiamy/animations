@@ -3,10 +3,10 @@
   <a class="link dog-link" my-href="dog">Dog</a>
 </header>
 <div class="page cat active">
-  <h2>Cat</h2>
+  <img class="pet" src="cat.svg" alt="cat-image"/>
 </div>
 <div class="page dog">
-  <h2>Dog</h2>
+  <img class="pet" src="dog.svg" alt="dog-image"/>
 </div>
 
 <script charset="utf-8">
@@ -39,18 +39,23 @@
   }
 
   .page {
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     opacity: 0;
     position: fixed;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
   }
 
   .page.active {
     opacity: 1;
   }
 
- .cat {
- }
-
- .dog {
- }
+  img.pet {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 200px;
+    width: 200px;
+  }
 </style>
