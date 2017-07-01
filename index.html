@@ -47,8 +47,18 @@
     transform: translateY(-50%);
   }
 
+  @keyframes shake {
+    0%   {transform: translateY(-50%);}
+    25%  {transform: translateY(-70%);}
+    50%  {transform: translateY(-50%);}
+    75%  {transform: translateY(-70%);}
+    100% {transform: translateY(-50%);}
+  }
+
   .page.active {
     opacity: 1;
+    animation-name: shake;
+    animation-duration: .5s;
   }
 
   img.pet {
